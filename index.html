@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Bhushan & Meghana - Wedding Invite</title>
+  <meta name="description" content="Wedding e-invite for Bhushan & Meghana" />
+
+  <style>
+    :root{
+      --bg:#07060a;
+      --card:rgba(255,255,255,.06);
+      --stroke:rgba(255,255,255,.12);
+      --text:#f4f2f7;
+      --muted:rgba(244,242,247,.72);
+      --accent:#ffffff;
+      --accentText:#0b0b0d;
+      --radius:18px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .wrap{
+      max-width: 520px;
+      margin: 0 auto;
+      padding: calc(16px + env(safe-area-inset-top)) 14px calc(44px + env(safe-area-inset-bottom));
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding: 18px 14px;
+      backdrop-filter: blur(6px);
+    }
+    .card + .card{ margin-top: 12px; }
+
+    .center{ text-align:center; }
+
+    .kicker{
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 6px 0 10px;
+    }
+
+    .name{
+      font-size: 40px;
+      line-height: 1.06;
+      margin: 0;
+      font-weight: 900;
+    }
+
+    .amp{
+      margin: 10px 0;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: .20em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .title{
+      font-size: 32px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+      font-weight: 1000;
+    }
+
+    .btn{
+      display:inline-block;
+      background: var(--accent);
+      color: var(--accentText);
+      text-decoration:none;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 1px solid rgba(255,255,255,.3);
+      margin: 8px 0 14px;
+    }
+
+    .img{
+      margin-top: 12px;
+      border-radius: 16px;
+      overflow:hidden;
+      border: 1px solid var(--stroke);
+      background: rgba(0,0,0,.25);
+    }
+
+    /* Portrait-friendly crop */
+    .img img{
+      width:100%;
+      display:block;
+      height:auto;
+      object-fit: cover;
+      aspect-ratio: 3 / 4;
+    }
+
+    .sectionTitle{
+      font-size: 15px;
+      margin: 0 0 10px;
+      font-weight: 1000;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .para{
+      margin: 0 0 12px;
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    .muted{ color: var(--muted); }
+
+    .grid{
+      display:grid;
+      gap: 10px;
+    }
+
+    .miniCard{
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 12px;
+      background: rgba(0,0,0,.22);
+    }
+    .miniTitle{ font-weight: 1000; margin-bottom: 6px; }
+    .line{ color: var(--muted); line-height: 1.55; font-size: 14px; }
+
+    .countTitle{
+      font-size: 18px;
+      margin: 0;
+      font-weight: 1000;
+      line-height: 1.25;
+    }
+
+    .countRow{
+      display:flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tbox{
+      flex:1;
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      background: rgba(0,0,0,.22);
+      padding: 10px 8px;
+      text-align:center;
+    }
+    .num{
+      font-size: 22px;
+      font-weight: 1000;
+    }
+    .lbl{
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+      letter-spacing: .02em;
+    }
+
+    .bottomTitle{
+      font-size: 22px;
+      font-weight: 1100;
+      margin: 12px 0 6px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .footSmall{
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .maker{
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width: 380px){
+      .name{ font-size: 34px; }
+      .title{ font-size: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="card center">
+      <div class="kicker">Wedding Invitation</div>
+
+      <h1 class="name">Bhushan</h1>
+      <div class="amp">&amp;</div>
+      <h1 class="name">Meghana</h1>
+
+      <div class="kicker">Are getting</div>
+      <div class="title">Married</div>
+
+      <!-- OPTIONAL: Replace this Google maps link later -->
+      <a class="btn" href="https://www.google.com/maps?q=The+Royal+Grand+Palace+Sompura+Gate" target="_blank" rel="noreferrer">
+        Go to venue
+      </a>
+
+      <!-- IMAGE 1: bhushan.jpeg (required) -->
+      <div class="img">
+        <img src="assets/bhushan.jpeg" alt="Bhushan Venu Kumar Reddy">
+      </div>
+
+      <p class="para muted" style="margin-top:12px; margin-bottom:0;">
+        Venue: The Royal Grand Palace, Sompura Gate, Next to HP Petrol Bunk,<br>
+        Bangalore–Sarjapura Main Road
+      </p>
+    </section>
+
+    <!-- COUPLE / MEGHANA PHOTO (optional) -->
+    <section class="card center">
+      <div class="sectionTitle">The Bride</div>
+
+      <!-- IMAGE 2: meghana.jpeg (optional) -->
+      <!-- If you don’t have it yet, delete this entire <div class="img"> block -->
+      <div class="img">
+        <img src="assets/meghana.jpeg" alt="Meghana">
+      </div>
+
+      <p class="para muted" style="margin-top:10px; margin-bottom:0;">
+        Meghana
+      </p>
+    </section>
+
+    <!-- WHEN & WHERE -->
+    <section class="card">
+      <div class="sectionTitle">When &amp; Where</div>
+      <p class="para muted">We’d love to have you with us</p>
+
+      <div class="grid">
+        <div class="miniCard">
+          <div class="miniTitle">Reception</div>
+          <div class="line">Saturday</div>
+          <div class="line"><strong>07 March 2026</strong></div>
+          <div class="line"><strong>6:00 PM onwards</strong></div>
+        </div>
+
+        <div class="miniCard">
+          <div class="miniTitle">Venue</div>
+          <div class="line">The Royal Grand Palace</div>
+          <div class="line">Sompura Gate, Next to HP Petrol Bunk</div>
+          <div class="line">Bangalore–Sarjapura Main Road</div>
+        </div>
+
+        <div class="miniCard">
+          <div class="miniTitle">Muhurtham</div>
+          <div class="line">Sunday</div>
+          <div class="line"><strong>08 March 2026</strong></div>
+          <div class="line"><strong>10:30 AM to 11:30 AM</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DECOR IMAGE (optional) -->
+    <section class="card center">
+      <div class="sectionTitle">A Glimpse</div>
+
+      <!-- IMAGE 3: decor.jpeg (optional) -->
+      <!-- If you don’t have it, delete this entire <div class="img"> block -->
+      <div class="img">
+        <img src="assets/decor.jpeg" alt="Decor / Invitation Photo">
+      </div>
+
+      <p class="para muted" style="margin-top:10px; margin-bottom:0;">
+        The countdown is on 💍
+      </p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="card center">
+      <h3 class="countTitle">Countdown Begins to<br>The Special Day!</h3>
+
+      <div class="countRow" aria-label="countdown">
+        <div class="tbox"><div class="num" id="d">0</div><div class="lbl">Days</div></div>
+        <div class="tbox"><div class="num" id="h">00</div><div class="lbl">Hours</div></div>
+        <div class="tbox"><div class="num" id="m">00</div><div class="lbl">Minutes</div></div>
+        <div class="tbox"><div class="num" id="s">00</div><div class="lbl">Seconds</div></div>
+      </div>
+
+      <div class="bottomTitle">Bhushan &amp; Meghana</div>
+
+      <div class="footSmall">
+        <div style="font-weight:1000; letter-spacing:.14em; text-transform:uppercase;">E invite is designed for mobile</div>
+        We kindly request you to open invite on Mobile
+      </div>
+
+      <div class="maker">Made by <strong>Bhushan</strong> With Love ❤️</div>
+    </section>
+
+  </main>
+
+  <script>
+    /**
+     * Countdown target: 07 March 2026, 6:00 PM IST
+     * IST is UTC+5:30 → 6:00 PM IST = 12:30 PM UTC
+     */
+    const targetUTC = Date.UTC(2026, 2, 7, 12, 30, 0);
+
+    function pad(n){ return String(n).padStart(2,"0"); }
+
+    function tick(){
+      const now = Date.now();
+      let diff = targetUTC - now;
+      if (diff < 0) diff = 0;
+
+      const total = Math.floor(diff/1000);
+      const days = Math.floor(total / (3600*24));
+      const hours = Math.floor((total % (3600*24)) / 3600);
+      const minutes = Math.floor((total % 3600) / 60);
+      const seconds = total % 60;
+
+      document.getElementById("d").textContent = days;
+      document.getElementById("h").textContent = pad(hours);
+      document.getElementById("m").textContent = pad(minutes);
+      document.getElementById("s").textContent = pad(seconds);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
